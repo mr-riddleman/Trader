@@ -1,0 +1,49 @@
+<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=theme-color content="#0f1115"><title>Trader</title><script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script><style>
+*{box-sizing:border-box}body{font-family:-apple-system,system-ui,sans-serif;background:#0f1115;color:#e8e8e8;margin:0;padding:12px 12px 90px;max-width:760px;margin:auto}
+h1{font-size:20px;margin:4px 0}h2{font-size:16px;margin:0 0 8px}.m{color:#8a8f98;font-size:12px}.g{color:#4ade80}.r{color:#f87171}
+.hero{background:linear-gradient(135deg,#1e293b,#111827);border-radius:16px;padding:16px;margin:8px 0}.hero .big{font-size:32px;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.st{background:#1a1d24;border-radius:10px;padding:8px}.st span{display:block;font-size:11px;color:#8a8f98}.st b{font-size:14px}
+.box{background:#161a21;border-radius:14px;padding:12px;margin:12px 0}.row{display:flex;justify-content:space-between;gap:8px;margin:2px 0;font-size:14px}
+.pc,.tc,.nc{background:#1f232c;border-radius:10px;padding:10px;margin:8px 0}.tc{border-left:4px solid #60a5fa}.tc.sell{border-left-color:#fbbf24}
+.nc p{margin:4px 0 0;font-size:13px}details{margin-top:4px;font-size:13px}summary{color:#60a5fa}
+.cw{position:relative;height:240px}@media(max-width:420px){.grid{grid-template-columns:repeat(2,1fr)}}
+.tabs{position:fixed;bottom:0;left:0;right:0;max-width:760px;margin:auto;padding-bottom:env(safe-area-inset-bottom);display:flex;background:#0b0d11;border-top:1px solid #222}.tabs a{flex:1;text-align:center;padding:12px;color:#ccc;text-decoration:none;font-size:13px}
+</style></head><body>
+<h1>📈 Trader Simulation</h1><div class=m>Superhero ($2 flat ≤$20k, 0.01% above; CHESS-sponsored)<br>2026-10-09 → 2027-04-09 · live prices (2-min cache) · auto-refresh 5 min</div>
+<div class=hero id=top><div class=m>Portfolio value</div><div class=big>$9,992.00</div><div class=r>-$8.00 (-0.08%) vs $10,000 contributed</div>
+<div class=m>ASX 200 since start: +0.00%</div></div>
+<div class=grid><div class=st><span>Total value</span><b class=>$9,992.00</b></div><div class=st><span>Return</span><b class=r>-$8.00</b></div><div class=st><span>Return %</span><b class=r>-0.08%</b></div><div class=st><span>ASX 200</span><b class=>+0.00%</b></div><div class=st><span>Contributed</span><b class=>$10,000.00</b></div><div class=st><span>Cash</span><b class=>$4,361.51</b></div><div class=st><span>Invested</span><b class=>$5,630.49</b></div><div class=st><span>Realised P&L</span><b class=>$0.00</b></div><div class=st><span>Trades</span><b class=>4 (4B / 0S)</b></div><div class=st><span>Win rate</span><b class=>—</b></div><div class=st><span>Fees paid</span><b class=>$8.00</b></div><div class=st><span>Turnover</span><b class=>$5,630.49</b></div></div>
+<div class=box id=charts><h2>Value vs money put in</h2><div class=cw><canvas id=c1></canvas></div></div>
+<div class=box><h2>Return % vs ASX 200</h2><div class=cw><canvas id=c2></canvas></div></div>
+<div class=box><h2>Allocation</h2><div class=cw><canvas id=c3></canvas></div></div>
+<div class=box id=hold><h2>Holdings (4)</h2><div class=pc><div class=row><b>VAS</b><b class=r>-0.10%</b></div>
+<div class=row><span>18 @ $108.03</span><span>now $107.92</span></div>
+<div class=row><span>Value $1,942.56 · 19.4%</span><span class=r>-$2.00</span></div></div><div class=pc><div class=row><b>CBA</b><b class=r>-0.13%</b></div>
+<div class=row><span>10 @ $149.49</span><span>now $149.29</span></div>
+<div class=row><span>Value $1,492.90 · 14.9%</span><span class=r>-$2.00</span></div></div><div class=pc><div class=row><b>GMG</b><b class=r>-0.17%</b></div>
+<div class=row><span>44 @ $27.21</span><span>now $27.16</span></div>
+<div class=row><span>Value $1,195.04 · 12.0%</span><span class=r>-$2.00</span></div></div><div class=pc><div class=row><b>NST</b><b class=r>-0.20%</b></div>
+<div class=row><span>41 @ $24.44</span><span>now $24.39</span></div>
+<div class=row><span>Value $999.99 · 10.0%</span><span class=r>-$2.00</span></div></div></div>
+<div class=box id=trades><h2>Trades (4)</h2><div class="tc buy"><div class=row><b>BUY NST</b><span class=m>2026-10-09 22:30</span></div>
+<div class=row><span>41 × $24.390</span><b>$999.99</b></div>
+<div class=row><span class=m>Fee $2.00 · cash after $4,361.51</span></div>
+<details><summary>Reasoning</summary><p>Large-cap gold producer, defensive hedge with gold near historically elevated ~US,150/oz; quarterly production report due Oct/Nov. Target 9, stop 0.50 (~16% below entry).</p></details></div><div class="tc buy"><div class=row><b>BUY GMG</b><span class=m>2026-10-09 22:30</span></div>
+<div class=row><span>44 × $27.160</span><b>$1,195.04</b></div>
+<div class=row><span class=m>Fee $2.00 · cash after $5,363.50</span></div>
+<details><summary>Reasoning</summary><p>Quality logistics/data-centre REIT, FY26 profit .675bn +15.7%, low gearing, benefiting from rotation into established infra names post-Firmus IPO withdrawal. Target 2, stop 3 (~15% below entry).</p></details></div><div class="tc buy"><div class=row><b>BUY CBA</b><span class=m>2026-10-09 22:30</span></div>
+<div class=row><span>10 × $149.290</span><b>$1,492.90</b></div>
+<div class=row><span class=m>Fee $2.00 · cash after $6,560.54</span></div>
+<details><summary>Reasoning</summary><p>Major bank benefiting from RBA cash rate at 4.60% (hiked 29 Sep) and possible 5th hike to 4.85% on 3 Nov -&gt; NIM tailwind. Target 65, stop 35 (~10% below entry).</p></details></div><div class="tc buy"><div class=row><b>BUY VAS</b><span class=m>2026-10-09 22:30</span></div>
+<div class=row><span>18 × $107.920</span><b>$1,942.56</b></div>
+<div class=row><span class=m>Fee $2.00 · cash after $8,055.44</span></div>
+<details><summary>Reasoning</summary><p>Core broad-market ASX300 ETF anchor holding for diversification; day-1 portfolio build. No single stop; rebalance if ASX200 breaks below 8400 (target: track index, trim on major overweight).</p></details></div></div>
+<div class=box id=log><h2>Journal, deposits & decisions</h2><div class=nc><span class=m>2026-10-09 22:30 · NOTE</span><p>Day 1 (9 Oct 2026): Built initial diversified core - VAS (ETF anchor), CBA (bank/NIM), GMG (quality REIT momentum), NST (gold defensive hedge). Kept ~43% cash to deploy opportunistically. Passed on lithium (PLS/LTR/MIN/IGO - Chinese carbonate futures down 4%, clear downtrend) and iron ore majors (oversupply, price down ~6% wk). Watching EOS (A00m counter-drone contract, +3.1%, still conditional on bank guarantee/export licences - too fresh/volatile for day 1), MGH (halted pending Firmus-related announcement), MP1 (AI infra contracts + raised FY27 guidance). Speculative microcaps MYE and TZL noted but passed - MYE illiquid (~70k/day turnover) after 417% YTD move, TZL flagged distress (failed placement).</p></div><div class=nc><span class=m>2026-10-09 22:35 · NOTE</span><p>Broker selected by research: Superhero — $2/trade up to $20k, 0.01% above, CHESS-sponsored, $0 account fees. Runner-up Stake ($3).</p></div><div class=nc><span class=m>2026-10-09 22:30 · NOTE</span><p>Simulation opened with $10,000 AUD starting capital.</p></div></div>
+<div class=tabs><a href=#top>Home</a><a href=#charts>Charts</a><a href=#hold>Holdings</a><a href=#trades>Trades</a><a href=#log>Log</a></div>
+<script>Chart.defaults.color='#9aa';Chart.defaults.borderColor='#2a2e37';Chart.defaults.maintainAspectRatio=false;Chart.defaults.elements.point.radius=3;Chart.defaults.scale.grace='10%';
+const L=["10-09", "now"];
+new Chart(c1,{type:'line',data:{labels:L,datasets:[{label:'Value $',data:[9992.0, 9992.0],borderColor:'#4ade80',backgroundColor:'rgba(74,222,128,.15)',fill:true,tension:.25},{label:'Contributed $',data:[10000, 10000],borderColor:'#888',borderDash:[5,5],stepped:true}]}});
+new Chart(c2,{type:'line',data:{labels:L,datasets:[{label:'Portfolio %',data:[-0.08, -0.08],borderColor:'#4ade80',tension:.25},{label:'ASX 200 %',data:[0.0, 0.0],borderColor:'#60a5fa',tension:.25}]}});
+new Chart(c3,{type:'doughnut',data:{labels:["VAS", "CBA", "GMG", "NST", "Cash"],datasets:[{data:[1942.56, 1492.9, 1195.04, 999.99, 4361.51],backgroundColor:['#4ade80','#60a5fa','#fbbf24','#f472b6','#a78bfa','#34d399','#fb923c','#22d3ee','#e879f9','#facc15','#94a3b8'].slice(0,4).concat(['#475569']),borderColor:'#161a21'}]}});
+</script></body></html>
